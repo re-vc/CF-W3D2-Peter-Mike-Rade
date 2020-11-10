@@ -1,5 +1,7 @@
 package Peter;
 
+import java.util.ArrayList;
+
 public class Book {
 
     private String name;
@@ -9,6 +11,7 @@ public class Book {
 
     // for extend task
     private Author bob;
+    private ArrayList authors;
 
     public Book(String name, Author author, double price, int quantity) {
         this.name = name;
@@ -25,8 +28,6 @@ public class Book {
     public Book(){}
 
     // extend task
-
-
     public Book(String name, Author author, Author bob, double price, int quantity) {
         this.name = name;
         this.author = author;
@@ -35,7 +36,13 @@ public class Book {
         this.bob = bob;
     }
 
-
+    // arraylist constructor
+    public Book(String name, ArrayList authors, double price, int quantity){
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.authors = authors;
+    }
 
     public String getName(){
         return this.name;
@@ -87,13 +94,29 @@ public class Book {
     // weird behaviour
     public void printAuthorNext(){
         System.out.println("--------------------");
-        System.out.println(bob.getName());
+        System.out.println(bob.getName() + "        Gender: " + bob.getGender());
+        System.out.println(bob.getEmail());
+        System.out.println(bob.getInstagram());
         System.out.println("--------------------");
     }
+    public void loopForAuthor(){
+        for (int i = 0; i < authors.size(); i++){
+            System.out.println(authors.get(i));
+        }
+    }
 
+    /*
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author=" + author +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 
-
-
+     */
 
     // changed for extend task
     @Override
