@@ -19,6 +19,7 @@ public class TestBook {
         Book book = new Book("ABC",author,999.99);
         Book book2 = new Book("CAB",author,999.99,10);
         Book book3 = new Book("RED",author, bob, 99.99, 2);
+
         System.out.println(book2);
 
         // task a1 2
@@ -28,6 +29,7 @@ public class TestBook {
         System.out.println(book.getAuthorGender());
 
         book.printAuthor();
-        System.out.println(book3);
+         System.out.println(book3);
+         book.printAuthorNext();
     }
 }

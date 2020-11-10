@@ -25,6 +25,8 @@ public class Book {
     public Book(){}
 
     // extend task
+
+
     public Book(String name, Author author, Author bob, double price, int quantity) {
         this.name = name;
         this.author = author;
@@ -32,6 +34,8 @@ public class Book {
         this.quantity = quantity;
         this.bob = bob;
     }
+
+
 
     public String getName(){
         return this.name;
@@ -80,6 +84,16 @@ public class Book {
         System.out.println(author.getInstagram());
         System.out.println("--------------------");
     }
+    // weird behaviour
+    public void printAuthorNext(){
+        System.out.println("--------------------");
+        System.out.println(bob.getName());
+        System.out.println("--------------------");
+    }
+
+
+
+
 
     // changed for extend task
     @Override
